@@ -1,0 +1,10 @@
+supplier,invoice_number,invoice_date,due_date,currency,subtotal,tax,total,purchase_order_reference
+BF IT,BF-POSS-1,2026-02-10,,USD,770.00,0.00,770.00,
+Moonridge Parts,MP-1,2026-02-20,,EUR,110.00,0.00,110.00,
+Harborview Maintenance,HV-CAD,2026-03-20,,CAD,250.00,0.00,250.00,
+Willowbrook Pack,WB-NOTOTAL,2026-04-20,,GBP,,,,
+Bluefern Technology,FILL-003,2026-02-11,2026-03-13,GBP,1824.00,456.00,2280.00,
+Harborview Facilities Ltd,FILL-004,2026-02-28,,EUR,1931.20,482.80,2414.00,PO-DEMO-004
+Willowbrook Pack,FILL-005,2026-03-17,2026-04-16,USD,2049.60,512.40,2562.00,
+Northstar Supplies,FILL-006,2026-04-03,,GBP,2156.80,539.20,2696.00,
+Bluefern Technology,PARSE-BAD,2026-09-15,,USD,0.00,0.00,not-a-number,

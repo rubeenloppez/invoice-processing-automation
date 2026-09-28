@@ -1,0 +1,8 @@
+Repository name:
+invoice-processing-automation
+
+Suggested GitHub description:
+Synthetic-data Python invoice workflow for CSV, XLSX, and known PDFs with review-ready Excel and CSV reports.
+
+Suggested topics:
+python, invoice-processing, automation, data-validation, data-cleaning, openpyxl, pdf-extraction, pytest

@@ -1,0 +1,7 @@
+supplier,invoice_number,invoice_date,due_date,currency,subtotal,tax,total,purchase_order_reference
+Cedarline Transport,CL-REF-1,2026-01-01,,EUR,900.00,0.00,900.00,
+Cedarline Transport,CL-REF-2,2026-02-01,,EUR,950.00,0.00,950.00,
+Cedarline Transport,CL-REF-3,2026-03-01,,EUR,1000.00,0.00,1000.00,
+Cedarline Transport,CL-REF-4,2026-04-01,,EUR,1050.00,0.00,1050.00,
+Cedarline Transport,CL-REF-5,2026-05-01,,EUR,1100.00,0.00,1100.00,
+Cedarline Logistics,FILL-007,2026-04-20,2026-05-20,EUR,2262.40,565.60,2828.00,PO-DEMO-007

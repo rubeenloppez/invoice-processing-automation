@@ -1,0 +1,9 @@
+supplier,invoice_number,invoice_date,due_date,currency,subtotal,tax,total,purchase_order_reference
+Northstar Office Supplies,NS-DUP-1,2026-03-10,2026-04-10,EUR,400.00,75.00,475.00,PO-NS-1
+NORTHSTAR OFFICE SUPPLIES,NS-PDF-1,2026-04-15,2026-05-15,EUR,1200.50,240.10,1440.60,
+NS Office,NS-POSS-1,2026-05-05,,EUR,320.00,0.00,320.00,
+Northstar   Office Supplies,NS-MISMATCH,2026-06-01,,EUR,800.00,100.00,999.00,
+Northstar Office Ltd,,2026-06-20,,EUR,230.00,0.00,230.00,
+Northstar Supplies,NS-BAD-DATE,2026-07-10,2026-07-01,EUR,160.00,0.00,160.00,
+Northstar Supplies,FILL-001,2026-01-08,2026-02-07,EUR,1606.40,401.60,2008.00,PO-DEMO-001
+Cedarline Logistics,FILL-002,2026-01-25,,USD,1710.40,427.60,2138.00,

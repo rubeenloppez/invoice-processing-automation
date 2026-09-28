@@ -1,0 +1,21 @@
+Recommended Upwork/Workana title:
+Python Invoice Processing and Reconciliation | CSV, Excel, PDF
+
+Short description (600 characters maximum):
+Portfolio project using synthetic invoices: a Python batch workflow reads CSV, XLSX, and known-layout digital PDFs, normalizes supplier names, validates amounts and dates, flags duplicates and outliers, and produces an Excel review workbook plus a per-file CSV report. It preserves source files and makes errors traceable. The fixed-seed demo covers 40 invoices across 10 files, with tests and a scenario verifier. Human review remains part of the process.
+
+Long description (approximately 800–1200 characters):
+I built this portfolio implementation to demonstrate a practical invoice review workflow in Python. It accepts CSV, XLSX, and machine-readable PDFs that match configured profiles, then extracts fields into a consistent invoice model. Supplier aliases are normalized, money is handled with Decimal, and business rules check required fields, currencies, due dates, and arithmetic. After all files are read, reconciliation flags exact duplicates across formats, possible duplicates with close dates and amounts, and unusually high totals within the same supplier and currency. The workflow keeps every invoice and marks records for review instead of silently changing values. A corrupt file does not stop the batch. The output is a four-sheet Excel workbook with an invoice register, traceable issues, supplier totals by currency, and summary metrics, plus a CSV processing report for every discovered file. A fixed-seed synthetic demo produces 40 invoices in 10 files, documents 19 expected scenarios, and verifies the reports and unchanged input hashes. This is a portfolio case study, not a claim of client deployment or automatic accounting approval.
+
+Relevant skills:
+- Python automation
+- CSV and Excel processing
+- PDF text extraction
+- Data normalization
+- Data validation
+- Invoice reconciliation
+- openpyxl reporting
+- pytest testing
+
+Call to action:
+If your invoice formats and review rules are known, I can discuss how a similar local workflow could be scoped for your process.

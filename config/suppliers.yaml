@@ -1,0 +1,30 @@
+suppliers:
+  - canonical_name: Northstar Office Supplies
+    aliases:
+      - Northstar Office Ltd
+      - Northstar Supplies
+      - NORTHSTAR OFFICE SUPPLIES
+      - NS Office
+      - Northstar   Office Supplies
+  - canonical_name: Cedarline Logistics
+    aliases:
+      - Cedarline Transport
+      - Cedarline Logistics Ltd
+      - CEDARLINE LOGISTICS
+      - Cedarline Log.
+  - canonical_name: Bluefern IT Services
+    aliases:
+      - Bluefern Technology
+      - Bluefern IT Ltd
+      - BF IT
+  - canonical_name: Harborview Facilities
+    aliases:
+      - Harborview Maintenance
+      - Harborview Facilities Ltd
+      - Harborview   Facilities
+  - canonical_name: Willowbrook Packaging
+    aliases:
+      - Willowbrook Pack
+      - WB Packaging
+      - WILLOWBROOK PACKAGING
+

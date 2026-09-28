@@ -1,0 +1,96 @@
+schema_version: 1
+seed: 20260928
+expected_invoice_count_range:
+- 35
+- 45
+files:
+  csv/cedarline_history.csv: SUCCESS
+  csv/mixed.csv: PARTIAL
+  csv/northstar.csv: REVIEW
+  csv/notes.txt: UNSUPPORTED
+  excel/general.xlsx: SUCCESS
+  excel/operations.xlsx: REVIEW
+  pdf/cedarline_normal.pdf: SUCCESS
+  pdf/corrupt.pdf: FAILED
+  pdf/northstar_duplicate.pdf: REVIEW
+  pdf/northstar_normal.pdf: SUCCESS
+scenarios:
+  exact_duplicate_csv_xlsx:
+    records:
+    - csv/northstar.csv#record-2
+    - excel/operations.xlsx#record-2
+    expected_issue: DUPLICATE
+    expected_status: REVIEW
+  exact_duplicate_csv_pdf:
+    records:
+    - csv/northstar.csv#record-3
+    - pdf/northstar_duplicate.pdf#record-1
+    expected_issue: DUPLICATE
+    expected_status: REVIEW
+  possible_duplicate_northstar:
+    records:
+    - csv/northstar.csv#record-4
+    - excel/operations.xlsx#record-3
+    expected_issue: POSSIBLE_DUPLICATE
+    expected_status: REVIEW
+  possible_duplicate_bluefern:
+    records:
+    - csv/mixed.csv#record-2
+    - excel/operations.xlsx#record-4
+    expected_issue: POSSIBLE_DUPLICATE
+    expected_status: REVIEW
+  arithmetic_mismatch:
+    record: csv/northstar.csv#record-5
+    expected_issue: AMOUNT_MISMATCH
+    expected_status: REVIEW
+  missing_invoice_number:
+    record: csv/northstar.csv#record-6
+    expected_issue: MISSING_FIELD
+    expected_status: REVIEW
+  invalid_business_date:
+    record: csv/northstar.csv#record-7
+    expected_issue: INVALID_DATE
+    expected_status: REVIEW
+  unknown_supplier:
+    record: csv/mixed.csv#record-3
+    expected_issue: UNKNOWN_SUPPLIER
+    expected_status: REVIEW
+  invalid_currency:
+    record: csv/mixed.csv#record-4
+    expected_issue: INVALID_CURRENCY
+    expected_status: REVIEW
+  missing_total:
+    record: csv/mixed.csv#record-5
+    expected_issue: MISSING_FIELD
+    expected_status: REVIEW
+  high_outlier:
+    record: excel/operations.xlsx#record-5
+    expected_issue: OUTLIER
+    expected_status: REVIEW
+  alias_canonical:
+    record: csv/northstar.csv#record-2
+    expected_supplier: Northstar Office Supplies
+  alias_uppercase:
+    record: csv/northstar.csv#record-3
+    expected_supplier: Northstar Office Supplies
+  alias_abbreviated:
+    record: csv/northstar.csv#record-4
+    expected_supplier: Northstar Office Supplies
+  alias_whitespace:
+    record: csv/northstar.csv#record-5
+    expected_supplier: Northstar Office Supplies
+  normal_invoice:
+    record: excel/general.xlsx#record-2
+    expected_status: VALID
+  unparseable_amount:
+    row_error: csv/mixed.csv#record-10
+    expected_issue: PARSE_ERROR
+    expected_file_status: PARTIAL
+  corrupt_pdf:
+    file: pdf/corrupt.pdf
+    expected_issue: PARSE_ERROR
+    expected_file_status: FAILED
+  unsupported_text:
+    file: csv/notes.txt
+    expected_issue: PARSE_ERROR
+    expected_file_status: UNSUPPORTED

@@ -1,0 +1,59 @@
+required_fields:
+  - supplier
+  - invoice_number
+  - invoice_date
+  - currency
+  - total
+
+allowed_currencies:
+  - EUR
+  - USD
+  - GBP
+
+amount_tolerance:
+  default: "0.02"
+  EUR: "0.02"
+  USD: "0.02"
+  GBP: "0.02"
+
+possible_duplicate_date_window_days: 3
+outlier_min_sample_size: 5
+outlier_median_multiplier: "8"
+outlier_absolute_threshold:
+  default: "5000"
+  EUR: "5000"
+  USD: "5000"
+  GBP: "5000"
+
+date_formats:
+  - "%Y-%m-%d"
+  - "%d/%m/%Y"
+  - "%m/%d/%Y"
+
+csv_delimiters:
+  - ","
+  - ";"
+  - "\t"
+
+column_aliases:
+  supplier: [supplier, vendor, supplier_name, vendor_name]
+  invoice_number: [invoice_number, invoice_no, invoice_id, invoice]
+  invoice_date: [invoice_date, date, issued_date]
+  due_date: [due_date, payment_due, due]
+  currency: [currency, curr]
+  subtotal: [subtotal, net_amount]
+  tax: [tax, vat, tax_amount]
+  total: [total, total_amount, invoice_total]
+  purchase_order_reference: [purchase_order_reference, purchase_order, po_number, po]
+
+number_formats:
+  csv:
+    decimal_separator: "."
+    thousands_separator: ","
+  excel:
+    decimal_separator: "."
+    thousands_separator: ","
+
+excel_sheet_name: Invoices
+unknown_supplier_severity: WARNING
+

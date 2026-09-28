@@ -1,0 +1,62 @@
+# Known layouts only. Every pattern captures one value as (?P<value>...).
+profiles:
+  - name: northstar_standard
+    supplier: Northstar Office Supplies
+    required_markers:
+      - NORTHSTAR OFFICE SUPPLIES
+      - INVOICE
+    number_format:
+      decimal_separator: "."
+      thousands_separator: ","
+    date_formats:
+      - "%Y-%m-%d"
+    fields:
+      supplier:
+        pattern: '^Supplier:[ \t]*(?P<value>[^\r\n]+)$'
+      invoice_number:
+        pattern: '^Invoice Number:[ \t]*(?P<value>[^\r\n]+)$'
+      invoice_date:
+        pattern: '^Invoice Date:[ \t]*(?P<value>[^\r\n]+)$'
+      due_date:
+        pattern: '^Due Date:[ \t]*(?P<value>[^\r\n]+)$'
+      currency:
+        pattern: '^Currency:[ \t]*(?P<value>[^\r\n]+)$'
+      subtotal:
+        pattern: '^Subtotal:[ \t]*(?P<value>[^\r\n]+)$'
+      tax:
+        pattern: '^Tax:[ \t]*(?P<value>[^\r\n]+)$'
+      total:
+        pattern: '^Total:[ \t]*(?P<value>[^\r\n]+)$'
+      purchase_order_reference:
+        pattern: '^Purchase Order:[ \t]*(?P<value>[^\r\n]+)$'
+
+  - name: cedarline_standard
+    supplier: Cedarline Logistics
+    required_markers:
+      - CEDARLINE LOGISTICS
+      - INVOICE
+    number_format:
+      decimal_separator: ","
+      thousands_separator: "."
+    date_formats:
+      - "%d/%m/%Y"
+    fields:
+      supplier:
+        pattern: '^Vendor:[ \t]*(?P<value>[^\r\n]+)$'
+      invoice_number:
+        pattern: '^Invoice No:[ \t]*(?P<value>[^\r\n]+)$'
+      invoice_date:
+        pattern: '^Date Issued:[ \t]*(?P<value>[^\r\n]+)$'
+      due_date:
+        pattern: '^Payment Due:[ \t]*(?P<value>[^\r\n]+)$'
+      currency:
+        pattern: '^Curr:[ \t]*(?P<value>[^\r\n]+)$'
+      subtotal:
+        pattern: '^Net:[ \t]*(?P<value>[^\r\n]+)$'
+      tax:
+        pattern: '^VAT:[ \t]*(?P<value>[^\r\n]+)$'
+      total:
+        pattern: '^Gross Total:[ \t]*(?P<value>[^\r\n]+)$'
+      purchase_order_reference:
+        pattern: '^PO:[ \t]*(?P<value>[^\r\n]+)$'
+

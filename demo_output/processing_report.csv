@@ -1,0 +1,11 @@
+﻿filename,status,invoices_count,invoice_numbers,issues_count,error_message
+csv/cedarline_history.csv,SUCCESS,6,CL-REF-1 | CL-REF-2 | CL-REF-3 | CL-REF-4 | CL-REF-5 | FILL-007,0,
+csv/mixed.csv,PARTIAL,8,BF-POSS-1 | MP-1 | HV-CAD | WB-NOTOTAL | FILL-003 | FILL-004 | FILL-005 | FILL-006,5,1 row failed to parse
+csv/northstar.csv,REVIEW,8,NS-DUP-1 | NS-PDF-1 | NS-POSS-1 | NS-MISMATCH | NS-BAD-DATE | FILL-001 | FILL-002,6,
+csv/notes.txt,UNSUPPORTED,0,,1,Unsupported file type: .txt
+excel/general.xlsx,SUCCESS,7,FILL-012 | FILL-013 | FILL-014 | FILL-015 | FILL-016 | FILL-017 | FILL-018,0,
+excel/operations.xlsx,REVIEW,8,NS-DUP-1 | NS-POSS-2 | BF-POSS-2 | CL-OUTLIER | FILL-008 | FILL-009 | FILL-010 | FILL-011,4,
+pdf/cedarline_normal.pdf,SUCCESS,1,CL-PDF-1,0,
+pdf/corrupt.pdf,FAILED,0,,1,CORRUPT_PDF: Failed to open file 'pdf/corrupt.pdf' as type pdf.
+pdf/northstar_duplicate.pdf,REVIEW,1,NS-PDF-1,1,
+pdf/northstar_normal.pdf,SUCCESS,1,NS-PDF-2,0,
